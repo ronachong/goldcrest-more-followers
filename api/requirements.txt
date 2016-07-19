@@ -1,7 +1,7 @@
 peewee
 flask
-Flask-JSON
+flask_json
 mysql-python
-functools
 dotenv
-jwt
+PyJWT
+flask-cors
