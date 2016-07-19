@@ -1,3 +1,5 @@
+console.log("does this work");
+
 var id_token = "<?php echo $_POST['id_token'] ?>;"
 var user_id = "<?php echo $_POST['user_id'] ?>;"
 
