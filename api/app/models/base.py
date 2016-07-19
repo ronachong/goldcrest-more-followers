@@ -1,7 +1,6 @@
 from peewee import *
 from config import *
 from datetime import datetime
-import MySQLdb
 
 # commented out arguments are for accessing actual remote
 # database.
