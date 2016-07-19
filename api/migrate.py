@@ -1,6 +1,7 @@
 from peewee import *
 from app.models import *
 
+@cross_origin()
 def create_tables():
     db_tables = [
             tweets.Tweet,
