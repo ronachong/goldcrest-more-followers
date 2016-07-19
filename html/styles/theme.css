@@ -4,31 +4,31 @@ body {
 }
 
 .jumbotron {
-    background-color: #FBBE09;
-    color: #f2f2f2;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
+  background-color: #FBBE09;
+  color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
 }
 
 h3 {
- font-family: 'Lato', sans-serif;   
+  font-family: 'Lato', sans-serif;
 }
 
 #gc_logo {
-    margin-top: 10px;
-    height: 160px;
-    width: 200px;
+   margin-top: 10px;
+   height: 160px;
+   width: 200px;
 }
 
 #gc_body {
-    display: flex;
-    flex-direction: row;
+   display: flex;
+   flex-direction: row;
 }
 
 #gc_body > p {
-    padding-left: 15px;
-    margin-top: 50px;
-    font-size: 20px;
+   padding-left: 15px;
+   margin-top: 50px;
+   font-size: 20px;
 }
 
 #twitter_login {
@@ -46,6 +46,7 @@ h3 {
     height: 600px;
     width: 450px;
 }
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -122,4 +123,57 @@ iframe {
     padding: 7px;
     align-items: center;
     font-size: 1.4em;
+
+#back_office_form {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3em;
+    width: 50%;
+    margin: auto;
+}
+
+#back_office_form label {
+    font-size: 30px;
+}
+
+#back_office_form input {
+    vertical-align: text-bottom;
+}
+
+#b_office_caption {
+    text-align: center;
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.btn-primary {
+    font-size: 30px;
+    background-image: linear-gradient(to bottom,#FBBE09 0,#FD8005 100%);
+    background-color: #FBBD04;
+    border-color: #FBBE09;  
+}
+
+.btn-success {
+    font-size: 30px;
+}
+
+.btn-danger {
+    font-size: 30px;
+}
+
+-/*
+-********* FONT STYLING ********
+-* LIGHTGREEN: B2B64A
+-* RED: FA3E
+-* GOLD: FBBD04
+-* ORANGE: FD8005
+-* LIGHT ORANGE: FBBE09
+-* BROWN: CE8F12
+-* YELLOW: F2E464
+-*/
+
+h1 {
+ font-family: Myriad Pro;   
 }

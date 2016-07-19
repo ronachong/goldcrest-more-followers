@@ -7,7 +7,7 @@ from functools import wraps
 from flask import Flask, request, jsonify, _request_ctx_stack
 from werkzeug.local import LocalProxy
 from dotenv import Dotenv
-from flask.ext.cors import cross_origin
+from flask_cors import CORS, cross_origin
 
 env = None
 
@@ -21,6 +21,7 @@ except IOError:
 app = Flask(__name__)
 app.config['JSON_ADD_STATUS'] = False
 json = FlaskJSON(app)
+CORS(app)
 
 '''Imports all views'''
 from views import *
