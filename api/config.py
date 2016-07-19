@@ -2,7 +2,7 @@ import os
 
 DATABASE = {
     'host': "localhost",
-    'port': 3306,
+    'port': 3301,
     'charset': "utf8",
     'user': "admin",
     'database': "twitter_bot_service",
