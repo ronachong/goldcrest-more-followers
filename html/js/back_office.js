@@ -43,7 +43,11 @@ function updateStatus() {
 // function for sending POST request
 function sendPOSTrequest(returnJSON) {
     var xhttp = new XMLHttpRequest();
+<<<<<<< HEAD
+    xhttp.open('POST', ENDPOINT HERE, true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+=======
     xhttp.open('POST', 'ENDPOINT HERE', true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+>>>>>>> d80d3515cddffb189af7fc3365bb8caa52f9fbc9
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('authorization', id_token);
 
