@@ -15,5 +15,4 @@ def create_tables():
     except:
         pass
 
-#create_tables()
 
