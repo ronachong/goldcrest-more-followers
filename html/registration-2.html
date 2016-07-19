@@ -6,3 +6,21 @@
 
 <!-- create put request to update relevant data (email and name for 'submit' button) -->
     <!-- create json using javascript and element id's to return to api as body of put request -->
+
+<script>
+    responseJSON = json.parse(xhttp.responseText); // not sure if this is the proper way to get the response data
+    var user_id = responseJSON["user_id"];
+    var email = responseJSON["email"];
+    var name = responseJSON["name"];
+    var keyword = responseJSON["keyword"];
+    var is_active = responseJSON["is_active"];
+    
+    var returnJSON = NULL;
+    
+    }
+        
+    
+</script>
+
+<!-- IDs so far:
+activate/deactivate button: id="activate"
