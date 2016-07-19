@@ -8,7 +8,6 @@
 		header("Location: http://goldcrests.hbtn.io");
 		die(); // No params provided
 	}
-	echo("here3");
 	$data = array(
 	    'user_id'      => $user_id,
 	    'id_token'    => $id_token,
@@ -28,12 +27,10 @@
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 	curl_close($curl);
 	if ( $status == 201 ) {
-		echo("here");
-		header("http://goldcrests.hbtn.io/registration.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User is new - Make them do stuff. 
+		header("Location: http://goldcrests.hbtn.io/registration.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User is new - Make them do stuff. 
 		die(); 
 	} elseif ( $status == 200 ) {
-		echo("here2");
-		header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User exists - Let them in. 
+		header("Location: http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User exists - Let them in. 
 		die(); 
 	} else {
 		header("Location: http://goldcrests.hbtn.io");
