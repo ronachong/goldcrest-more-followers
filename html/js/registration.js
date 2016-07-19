@@ -3,11 +3,11 @@ var user_id = "<?php echo $_POST['user_id'] ?>;"
 
 var returnJSON = null;
 var authorization = "Bearer" + id_token
-var submitButton = getElementByID("submit");
+var submitButton = getElementById("submit");
 
 // handler for clicking on submit button; sends POST request with email, name, user_id; sends GET request to API; and
 // navigates to back office with POST request
-submitButton.onclick = updateUserInfo;
+submitButton.onclick = registerUser;
 
 function registerUser() {
     name = document.getElementById("name").value
