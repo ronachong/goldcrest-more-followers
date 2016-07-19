@@ -10,5 +10,6 @@ from flask import abort
 def get_user():
     ''' Creates a new user '''
     data = request.get_json()
-    print data
-    return {"message": "Hello World"}, 200
+    data2 = request.form
+
+    return jsonify(data2), 200
