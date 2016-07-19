@@ -8,7 +8,7 @@
     <!-- create json using javascript and element id's to return to api as body of put request -->
 
 <script>
-    responseJSON = json.parse(xhttp.responseText); // not sure if this is the proper way to get the response data
+    responseJSON = json.parse(xhttp.responseText); // going by http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
     var id_token = responseJSON["id_token"]
     var user_id = responseJSON["user_id"];
     var email = responseJSON["email"];
@@ -22,20 +22,21 @@
     var submitButton = getElementByID("submit");
     var activateButton = getElementByID("activate");
     
-    // handler for clicking update button
+    // handler for clicking update button; sends POST request with keyword, user_id
     submitButton.onclick = updateKeyword;
     
     function updateKeyword() {
         keyword = document.getElementById("keyword").value  // update keyword value
         
         returnJSON = {
-            "keyword" : keyword
+            "keyword" : keyword,
+            "user_id" : user_id
         };
         
-        sendPUTrequest(returnJSON);
+        sendPOSTrequest(returnJSON);
     }
     
-    // handler for clicking deactivate/activate button
+    // handler for clicking deactivate/activate button; sends POST request with is_active, user_id
     activateButton.onclick = updateStatus;
     
     function updateStatus() {
@@ -46,10 +47,10 @@
             "user_id" : user_id
         }
         
-        sendPUTrequest(returnJSON);
+        sendPOSTrequest(returnJSON);
     }
     
-    function sendPUTrequest(returnJSON) {
+    function sendPOSTrequest(returnJSON) {
         var xhttp = new XMLHttpRequest();
         xhttp.open('POST', returnJSON, true);
         xhttp.setRequestHeader('Content-Type', 'application/json');
