@@ -8,7 +8,6 @@
 		header("Location: http://goldcrests.hbtn.io");
 		die(); // No params provided
 	}
-	$url = "http://localhost:3001/users/";
 	$data = array(
 	    'user_id'      => $user_id,
 	    'id_token'    => $id_token,
