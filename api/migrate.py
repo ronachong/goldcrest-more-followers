@@ -7,8 +7,11 @@ def create_tables():
             user.User]
 
     try:
+        base.db.connect()
         base.db.create_tables(db_tables, safe=True)
+        base.db.close()
     except:
         pass
 
-create_tables()
+#create_tables()
+
