@@ -6,9 +6,10 @@ from datetime import datetime
 from flask import abort, jsonify
 
 @app.route('/users', methods=['POST'])
+@app.as_json
 def get_user():
     ''' Creates a new user '''
     data = request.get_json()
     data2 = request.form
 
-    return jsonify(data2), 200
+    return data2, 200
