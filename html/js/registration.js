@@ -34,8 +34,12 @@ function sendPOSTrequest2API(returnJSON) {
     // do I need xhttp.onload here?? what does that do? see http://blog.garstasio.com/you-dont-need-jquery/ajax/ under Web API
 
     xhttp.send(JSON.stringify(returnJSON)); // not sure if I need to put send data inside () or can use just empty (); see http://blog.garstasio.com/you-dont-need-jquery/ajax/ under Web API
+    
+    // get response: hope that it contains id_token, user_id, email, name, keyword and is_active
+    
 }
 
+/*
 // function for sending GET request to API
 function sendGETrequest2API() {
     var xhttp = new XMLHttpRequest();
@@ -48,4 +52,4 @@ function sendGETrequest2API() {
     xhttp.send(); // not sure if I need to put send data inside () or can use just empty (); see http://blog.garstasio.com/you-dont-need-jquery/ajax/ under Web API
     responseJSON = json.parse(xhttp.responseText) // going by http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
     
-}
+} */
