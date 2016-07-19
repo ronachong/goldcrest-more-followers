@@ -5,7 +5,9 @@ from app import app
 from datetime import datetime
 from flask import abort
 
-@app.route('/users/<user_id>', methods=['GET'])
+@app.route('/users', methods=['POST'])
 @as_json
 def get_user(user_id):
-    abort(404)
+    ''' Creates a new user '''
+    data = request.get_json()
+    print data
