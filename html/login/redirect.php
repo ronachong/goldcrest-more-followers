@@ -14,7 +14,7 @@
 	    'access_token'       => $access_token,
 	    'access_token_secret' => $access_token_secret
 	);
-	$url = "http://localhost:3001/users/";    
+	$url = "http://localhost:3001/users";    
 	$content = json_encode($data);
 	$authorization = "Authorization: Bearer " . $id_token;
 	$curl = curl_init($url);
