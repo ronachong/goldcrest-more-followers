@@ -1,7 +1,7 @@
 var id_token = "<?php echo $_POST['id_token'] ?>;"
 var user_id = "<?php echo $_POST['user_id'] ?>;"
 
-var returnJSON = NULL;
+var returnJSON = null;
 var authorization = "Bearer" + id_token
 var submitButton = getElementByID("submit");
 
@@ -27,7 +27,7 @@ function registerUser() {
 // function for sending POST request to API
 function sendPOSTrequest2API(returnJSON) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', ENDPOINT HERE, true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+    xhttp.open('POST', 'ENDPOINTHERE', true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('authorization', id_token);
 
