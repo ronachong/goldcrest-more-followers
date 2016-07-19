@@ -38,7 +38,7 @@
       
       <!-- javascript to connect to API here -->
 
-    <!--<?php ?>-->
+    <?php ?>
     <script src="js/back_office.js"></script>      
 
   </head>
