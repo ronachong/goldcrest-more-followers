@@ -11,10 +11,10 @@
 	$data = array(
 	    'user_id'      => $user_id,
 	    'id_token'    => $id_token,
-	    'access_token'       => $access_token,
-	    'access_token_secret' => $access_token_secret
+	    'access_token'       => $_POST['access_token'],
+	    'access_token_secret' => $_POST['access_token_secret']
 	);
-	$url = "http://localhost:3001/users";    
+	$url = "http://localhost:3001/users";
 	$content = json_encode($data);
 	$authorization = "Authorization: Bearer " . $id_token;
 	$curl = curl_init($url);
@@ -27,14 +27,13 @@
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 	curl_close($curl);
 	if ( $status == 201 ) {
-		header("Location: http://goldcrests.hbtn.io/registration.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User is new - Make them do stuff. 
-		die(); 
+		header("Location: http://goldcrests.hbtn.io/registration.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User is new - Make them do stuff.
+		die();
 	} elseif ( $status == 200 ) {
-		header("Location: http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User exists - Let them in. 
-		die(); 
+		header("Location: http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User exists - Let them in.
+		die();
 	} else {
 		header("Location: http://goldcrests.hbtn.io");
 		die(); // 404
 	}
 ?>
-
