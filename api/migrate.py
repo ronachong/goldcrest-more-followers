@@ -9,8 +9,7 @@ def create_tables():
 
     try:
         base.db.create_tables(db_tables, safe=True)
-    except peewee.OperationalError:
+    except:
         pass
 
 create_tables()
-
