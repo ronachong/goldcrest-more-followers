@@ -1,6 +1,6 @@
 from peewee import *
 from base import BaseModel
-from users import User 
+from user import User 
 
 class Tweet(BaseModel):
     tweet_id = IntegerField(unique=True)
