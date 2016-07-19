@@ -2,6 +2,7 @@ import jwt
 import base64
 import os
 
+from flask_json import FlaskJSON
 from functools import wraps
 from flask import Flask, request, jsonify, _request_ctx_stack
 from werkzeug.local import LocalProxy
@@ -18,6 +19,7 @@ except IOError:
   env = os.environ
 
 app = Flask(__name__)
+json = FlaskJSON(app)
 
 '''Imports all views'''
 from views import *
