@@ -3,6 +3,50 @@ body {
   padding-bottom: 30px;
 }
 
+-.jumbotron {
+    -    background-color: #FBBE09;
+    -    color: #f2f2f2;
+    -    font-family: 'Lato', sans-serif;
+    -    text-align: center;
+    -}
+-
+-h3 {
+    - font-family: 'Lato', sans-serif;
+    -}
+-
+-#gc_logo {
+    -    margin-top: 10px;
+    -    height: 160px;
+    -    width: 200px;
+    -}
+-
+-#gc_body {
+    -    display: flex;
+    -    flex-direction: row;
+    -}
+-
+-#gc_body > p {
+    -    padding-left: 15px;
+    -    margin-top: 50px;
+    -    font-size: 20px;
+    -}
+-
+-#twitter_login {
+    -    padding-top: 100px;
+    -    height: 500px;
+    -    text-align: center;
+    -}
+-
+-.press_release {
+    -    display: flex;
+    -    flex-direction: column;
+    -    align-items: center;
+    -}
+-#press_release {
+    -    height: 600px;
+    -    width: 450px;
+    -}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -75,6 +119,17 @@ iframe {
 .btn-danger {
     font-size: 30px;
 }
+
+-/*
+-********* FONT STYLING ********
+-* LIGHTGREEN: B2B64A
+-* RED: FA3E
+-* GOLD: FBBD04
+-* ORANGE: FD8005
+-* LIGHT ORANGE: FBBE09
+-* BROWN: CE8F12
+-* YELLOW: F2E464
+-*/
 
 h1 {
  font-family: Myriad Pro;   
