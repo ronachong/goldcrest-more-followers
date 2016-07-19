@@ -8,6 +8,7 @@ User defines a user object which contains information
 about each user in the database.
 '''
 class User(BaseModel):
+    user_id = CharField(128, null=False, unique=True)
     email = CharField(128, null=False, unique=True)
     password = CharField(128, null=False)
     name = CharField(128, null=False)
@@ -16,7 +17,7 @@ class User(BaseModel):
     created_at = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
     access_token = CharField(512, null=False)
     access_token_secret = CharField(512, null=False)
-    
+
     def to_hash(self):
         hash = {
             'user_id': self.user_id,
@@ -30,5 +31,3 @@ class User(BaseModel):
         }
 
         return hash
-        
-    
