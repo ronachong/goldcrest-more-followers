@@ -6,11 +6,11 @@ var name = <?php echo $_POST['name'] ?>;
 var keyword = <?php echo $_POST['keyword'] ?>;
 var is_active = <?php echo $_POST['is_active'] ?>;
 
-var returnJSON = NULL;
+var returnJSON = null;
 var authorization = "Bearer" + id_token
 
-var submitButton = getElementByID("submit");
-var activateButton = getElementByID("activate");
+var submitButton = document.getElementByID("submit");
+var activateButton = document.getElementByID("activate");
 
 // handler for clicking update button; sends POST request with keyword, user_id
 submitButton.onclick = updateKeyword;
@@ -43,7 +43,11 @@ function updateStatus() {
 // function for sending POST request
 function sendPOSTrequest(returnJSON) {
     var xhttp = new XMLHttpRequest();
+<<<<<<< HEAD
     xhttp.open('POST', ENDPOINT HERE, true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+=======
+    xhttp.open('POST', 'ENDPOINT HERE', true); // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+>>>>>>> d80d3515cddffb189af7fc3365bb8caa52f9fbc9
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.setRequestHeader('authorization', id_token);
 
