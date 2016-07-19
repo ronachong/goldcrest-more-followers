@@ -31,10 +31,41 @@ h3 {
    font-size: 20px;
 }
 
+.btn-primary {
+    font-size: 30px;
+    background-image: linear-gradient(to bottom,#FBBE09 0,#FD8005 100%);
+    background-color: #FBBD04;
+    border-color: #FBBE09;  
+}
+
+.btn-primary.active, .btn-primary:active {
+    background-color: #FD8005;
+    border-color: #FD8005;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #FD8005;
+    background-position: 0 -15px;
+    border-color: #FBBE09;  
+}
+
+.btn-success {
+    font-size: 30px;
+}
+
+.btn-danger {
+    font-size: 30px;
+}
+
 #twitter_login {
     padding-top: 100px;
     height: 500px;
     text-align: center;
+}
+
+#team_button {
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .press_release {
@@ -149,26 +180,7 @@ iframe {
     margin-top: 60px;
 }
 
-.btn-primary {
-    font-size: 30px;
-    background-image: linear-gradient(to bottom,#FBBE09 0,#FD8005 100%);
-    background-color: #FBBD04;
-    border-color: #FBBE09;  
-}
 
-.btn-primary:focus, .btn-primary:hover {
-    background-color: #FD8005;
-    background-position: 0 -15px;
-    border-color: #FBBE09;  
-}
-
-.btn-success {
-    font-size: 30px;
-}
-
-.btn-danger {
-    font-size: 30px;
-}
 
 -/*
 -********* FONT STYLING ********
