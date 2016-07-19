@@ -8,7 +8,7 @@
 		header("Location: http://goldcrests.hbtn.io");
 		die(); // No params provided
 	}
-	$url = "http://localhost:3001/users/". $user_id . "/" . "?id_token=" . $id_token . "&access_token=" . $access_token . "&access_token_secret=" . $access_token_secret;
+	$url = "http://localhost:3001/users/". urlencode($user_id) . "/" . "?id_token=" . $id_token . "&access_token=" . $access_token . "&access_token_secret=" . $access_token_secret;
 	$options = array(
 	    'http' => array(
 	        'header'  => "Content-type: application/x-www-form-urlencoded\r\n", 
