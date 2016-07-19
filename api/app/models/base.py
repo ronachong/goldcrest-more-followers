@@ -1,5 +1,6 @@
 from peewee import *
 from config import *
+from secret import *
 from datetime import datetime
 
 # commented out arguments are for accessing actual remote
@@ -10,7 +11,7 @@ db = MySQLDatabase(
     charset=DATABASE['charset'],
     user=DATABASE['user'],
     database=DATABASE['database'],
-    password=DATABASE['password']
+    password=PASSWORD
     )
 
 class BaseModel(Model):
