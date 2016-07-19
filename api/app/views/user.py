@@ -7,7 +7,7 @@ from flask import abort
 
 @app.route('/users', methods=['POST'])
 @as_json
-def get_user(user_id):
+def get_user():
     ''' Creates a new user '''
     data = request.get_json()
     return {"message": "Hello World"}, 200
