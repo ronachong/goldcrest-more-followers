@@ -6,6 +6,20 @@
         <meta charset="utf-8">
         <title>Goldcrest Optimization</title>
         
+        <!-- Bootstrap core CSS -->
+        <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../styles/theme.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
         <!-- javascript to connect to API here -->
 
         <script type="text/javascript">            
