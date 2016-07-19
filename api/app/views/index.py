@@ -2,6 +2,7 @@ from app import app
 
 from functools import wraps
 from flask import Flask, request, jsonify, _request_ctx_stack
+from flask_json import as_json, request
 from werkzeug.local import LocalProxy
 from dotenv import Dotenv
 from flask.ext.cors import cross_origin
@@ -61,3 +62,9 @@ def ping():
 @requires_auth
 def securedPing():
     return "All good. You only get this message if you're authenticated"
+
+@app.errorhandler(404)
+@as_json
+def not_found(error):
+    ''' return a JSON with code = 404 and msg = "not found"'''
+    return {"code":404, "msg":"not found"}, 404

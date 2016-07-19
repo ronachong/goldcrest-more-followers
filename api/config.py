@@ -1,7 +1,7 @@
 import os
 
 DATABASE = {
-    'host': "0.0.0.0",
+    'host': "localhost",
     'port': 3306,
     'charset': "utf8",
     'user': "admin",
@@ -9,8 +9,6 @@ DATABASE = {
     'password': "holberton1"
 }
 
-DEBUG = True
-HOST = "localhost"
-PORT = 3333
-
-    
+DEBUG = False
+HOST = "0.0.0.0"
+PORT = 3001

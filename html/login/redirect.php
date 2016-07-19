@@ -5,10 +5,10 @@
 		$access_token =  $_POST['access_token'];
 		$access_token_secret =  $_POST['access_token_secret'];
 	} else {
-		header("Location: https://google.com");
+		header("Location: http://goldcrests.hbtn.io");
 		die(); // No params provided
 	}
-	$url = "http://localhost:3001/users/". $user_id ."/" . "?id_token=" . $id_token . "&access_token=" . $access_token . "&access_token_secret=" . $access_token_secret;
+	$url = "http://localhost:3001/users/". urlencode($user_id) . "/" . "?id_token=" . $id_token . "&access_token=" . $access_token . "&access_token_secret=" . $access_token_secret;
 	$options = array(
 	    'http' => array(
 	        'header'  => "Content-type: application/x-www-form-urlencoded\r\n", 
@@ -19,10 +19,13 @@
 	);
 	$context  = stream_context_create($options);
 	$result = file_get_contents($url, false, $context);
+	echo($result);
 	if ($result === FALSE) { 
-		/* no user */
+		//header("http://goldcrests.hbtn.io/registration-2.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User is new - Make them do stuff. */
+		die(); 
 	} else {
-		/* user found*/
+		//header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User exists - Let them in. */
+		die(); 
 	}
 ?>
 

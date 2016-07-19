@@ -1,4 +1,5 @@
 __all__ = [
     "base",
-    "user"
+    "user",
+    "tweets"
 ]
