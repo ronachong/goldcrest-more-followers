@@ -61,3 +61,6 @@ def requires_auth(f):
     return f(*args, **kwargs)
 
   return decorated
+
+'''Imports all views'''
+from views import *
