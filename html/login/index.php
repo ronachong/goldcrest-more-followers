@@ -82,7 +82,7 @@
 					document.sendin.user_id.value = profile.user_id;
 					document.sendin.id_token.value = id_token;
 					document.sendin.access_token.value = profile.identities.access_token;
-					document.sendin.access.access_token_secret.value = profile.identities.access_token_secret;
+					document.sendin.access_token_secret.value = profile.identities.access_token_secret;
 					document.sendin.action = "http://goldcrests.hbtn.io/login/redirect.php";
 					document.sendin.submit();
 				});
