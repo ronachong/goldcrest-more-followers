@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify, _request_ctx_stack
 from flask_json import as_json, request
 from werkzeug.local import LocalProxy
 from dotenv import Dotenv
-from flask.ext.cors import cross_origin
+from flask_cors import cross_origin
 
 # Format error response and append status code.
 def handle_error(error, status_code):
