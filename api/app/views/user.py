@@ -3,7 +3,7 @@ from app.models.user import User
 from flask_json import as_json, request
 from app import app
 from datetime import datetime
-from flask import abort
+from flask import abort, jsonify
 
 @app.route('/users', methods=['POST'])
 @as_json
