@@ -1,10 +1,11 @@
 from peewee import *
-from app.models import *
+from app.models.tweets import Tweet
+from app.models.user import User
 
 def create_tables():
     db_tables = [
-            tweets.Tweet,
-            user.User]
+            Tweet,
+            User]
 
     try:
         base.db.create_tables(db_tables, safe=True)
