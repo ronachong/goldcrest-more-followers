@@ -1,19 +1,19 @@
 from peewee import *
-from app.models.tweets import Tweet
-from app.models.user import User
-import warnings
-from flask.exthook import ExtDeprecationWarning
+from app.models import *
+from flask_cors import CORS, cross_origin
 
-warnings.simplefilter('ignore', ExtDeprecationWarning)
-
+@cross_origin()
 def create_tables():
     db_tables = [
-            Tweet,
-            User]
+            tweets.Tweet,
+            user.User]
 
     try:
+        base.db.connect()
         base.db.create_tables(db_tables, safe=True)
+        base.db.close()
     except:
         pass
 
-create_tables()
+#create_tables()
+
