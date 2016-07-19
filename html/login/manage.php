@@ -25,10 +25,10 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	</head>
 	<body style="margin:0px;padding:0px;overflow:hidden">
-    	<iframe src="https://manage.auth0.com/" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+    	<iframe id="iframe" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
 	</body>
 	<script type="text/javascript">
-		var iframe = document.getElementsByTagName('iframe')[0];
+		var iframe = document.getElementsById('iframe');
 		var url = iframe.src;
 		var getData = function (data) {
 		    if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) loadHTML(data.query.results.resources.content);
