@@ -61,3 +61,9 @@ def ping():
 @requires_auth
 def securedPing():
     return "All good. You only get this message if you're authenticated"
+
+@app.errorhandler(404)
+@as_json
+def not_found(error):
+    ''' return a JSON with code = 404 and msg = "not found"'''
+    return {"code":404, "msg":"not found"}, 404
