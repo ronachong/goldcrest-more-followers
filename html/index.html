@@ -75,26 +75,9 @@
     </div>
         
     <div id="twitter_login">
-        <button id="login_button">Login with Twitter!</button>    
+        <button id="login_button" href="http://goldcrests.hbtn.io/login">Login with Twitter!</button>    
     </div>
 
-    <script type="text/javascript">
-      var lock = new Auth0Lock(
-        AUTH0_CLIENT_ID,
-        AUTH0_DOMAIN
-      );
-      var userProfile;
-      var id_token;
-      document.getElementById('login_button').addEventListener('click', function() {
-        lock.show({ 
-            authParams: { scope: 'openid' },
-            closable: true,
-            icon: 'http://goldcrests.hbtn.io//login/icon57x57.png',
-            callbackURL: 'http://goldcrests.hbtn.io/login',
-            callbackOnLocationHash: true
-          }); 
-      });
-    </script>
     
     <div class="press_release">
         <p>Read our first press release!</p>
