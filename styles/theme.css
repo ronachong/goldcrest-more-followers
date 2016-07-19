@@ -16,3 +16,23 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+.sticky {
+    vertical-align: middle;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* background: linear-gradient(lightgray, aliceblue); */
+    padding: 5px 10px 5px 10px;
+}
+
+.fb-like {
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+iframe {
+    height: 30px;
+    border: none;
+}
