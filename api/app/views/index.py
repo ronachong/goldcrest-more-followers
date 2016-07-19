@@ -1,5 +1,7 @@
 from app import app
 
+from flask.ext.cors import cross_origin
+
 # Controllers API
 @app.route("/ping")
 @cross_origin(headers=['Content-Type', 'Authorization'])
