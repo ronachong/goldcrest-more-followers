@@ -1,7 +1,7 @@
 import os
 
 DATABASE = {
-    'host': "0.0.0.0",
+    'host': "172.31.48.130",
     'port': 3306,
     'charset': "utf8",
     'user': "admin",
