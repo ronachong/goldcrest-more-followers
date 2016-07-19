@@ -1,0 +1,7 @@
+peewee
+flask
+Flask-JSON
+mysql-python
+functools
+dotenv
+jwt
