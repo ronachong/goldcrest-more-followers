@@ -15,7 +15,6 @@
 	    'access_token'       => $access_token,
 	    'access_token_secret' => $access_token_secret
 	);
-	
 	$url = "http://localhost:3001/users/";    
 	$content = json_encode($data);
 	$authorization = "Authorization: Bearer " . $id_token;
@@ -25,21 +24,18 @@
 	curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type: application/json", $authorization));
 	curl_setopt($curl, CURLOPT_POST, true);
 	curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
-
 	$json_response = curl_exec($curl);
-
 	$status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
+	curl_close($curl);
 	if ( $status == 201 ) {
-		header("http://goldcrests.hbtn.io/registration-2.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User is new - Make them do stuff. */
+		header("http://goldcrests.hbtn.io/registration-2.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User is new - Make them do stuff. 
 		die(); 
 	} elseif ( $status == 200 ) {
-		header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User exists - Let them in. */
+		header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); // User exists - Let them in. 
 		die(); 
 	} else {
 		header("Location: http://goldcrests.hbtn.io");
 		die(); // 404
 	}
-	curl_close($curl);
 ?>
 
