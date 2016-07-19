@@ -19,11 +19,12 @@
 	);
 	$context  = stream_context_create($options);
 	$result = file_get_contents($url, false, $context);
+	echo($result);
 	if ($result === FALSE) { 
-		header("http://goldcrests.hbtn.io/registration-2.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User is new - Make them do stuff. */
+		//header("http://goldcrests.hbtn.io/registration-2.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User is new - Make them do stuff. */
 		die(); 
 	} else {
-		header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User exists - Let them in. */
+		//header("http://goldcrests.hbtn.io/back_office.php/?user_id=" .  $user_id . "&id_token=" . $id_token); /* User exists - Let them in. */
 		die(); 
 	}
 ?>
