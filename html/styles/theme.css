@@ -156,6 +156,12 @@ iframe {
     border-color: #FBBE09;  
 }
 
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #FD8005;
+    background-position: 0 -15px;
+    border-color: #FBBE09;  
+}
+
 .btn-success {
     font-size: 30px;
 }
