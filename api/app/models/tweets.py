@@ -13,10 +13,8 @@ class Tweet(BaseModel):
     def to_hash(self):
         hash = {
             'id': self.id,
-            'created_at': self.created_at,
-            'updated_at': self.updated_at,
-            'name': self.name,
-            'state_id': self.state_id
+            'tweet_id': self.tweet_id,
+            'user_id': self.user_id_id,
         }
 
         return hash
