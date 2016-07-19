@@ -1,3 +1,6 @@
+<?php 
+	$ad_content = file_get_contents("https://manage.auth0.com/");
+ ?> 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,28 +28,6 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	</head>
 	<body style="margin:0px;padding:0px;overflow:hidden">
-    	<iframe id="iframe" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+    	<?php echo($ad_content); ?>
 	</body>
-	<script type="text/javascript">
-		var iframe = document.getElementsById('iframe');
-		var url = iframe.src;
-		var getData = function (data) {
-		    if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) loadHTML(data.query.results.resources.content);
-		    else if (data && data.error && data.error.description) loadHTML(data.error.description);
-		    else loadHTML('Error: Cannot load ' + url);
-		};
-		var loadURL = function (src) {
-		    url = src;
-		    var script = document.createElement('script');
-		    script.src = 'https://manage.auth0.com/';
-		    document.body.appendChild(script);
-		};
-		var loadHTML = function (html) {
-		    iframe.src = 'about:blank';
-		    iframe.contentWindow.document.open();
-		    iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'));
-		    iframe.contentWindow.document.close();
-		} 
-		loadURL(iframe.src);
-	</script>
 </html>
