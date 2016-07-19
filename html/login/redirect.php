@@ -31,7 +31,7 @@
 		header("Location: http://goldcrests.hbtn.io/registration.php/?user_id=" .  urlencode($user_id) . "&id_token=" . $id_token); // User is new - Make them do stuff.
 		die();
 	} elseif ( $status == 200 ) {
-		header("Location: http://goldcrests.hbtn.io/back_office.php" //?user_id=" .  urlencode($user_id) . "&id_token=" . $id_token); // User exists - Let them in.
+		header("Location: http://goldcrests.hbtn.io/back_office.php"); //?user_id=" .  urlencode($user_id) . "&id_token=" . $id_token); // User exists - Let them in.
 		die();
 	} else {
 		header("Location: http://goldcrests.hbtn.io");
