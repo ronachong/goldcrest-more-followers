@@ -22,8 +22,9 @@
 
         <!-- javascript to connect to API here -->
 
-        <script type="text/javascript">            
-            //responseJSON = json.parse(xhttp.responseText); going by http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
+        <?php ?>
+        <script type="text/javascript">
+            console.log("does this work");
             var id_token = <?php echo $_POST['id_token'] ?>;
             var user_id = <?php echo $_POST['user_id'] ?>;
             var email = <?php echo $_POST['email'] ?>;
