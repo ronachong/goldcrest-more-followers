@@ -89,10 +89,8 @@
         lock.show({ 
             authParams: { scope: 'openid' },
             closable: true,
-            icon: 'icon57x57.png',
-            authParams: {
-                state: 'ru=http://goldcrests.hbtn.io/login'
-            }
+            icon: '/login/icon57x57.png',
+            callbackURL: 'http://goldcrests.hbtn.io/login/'
           }); 
       });
     </script>
