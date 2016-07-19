@@ -11,6 +11,4 @@ DATABASE = {
 
 DEBUG = False
 HOST = "localhost"
-PORT = 3301
-
-    
+PORT = 3001
