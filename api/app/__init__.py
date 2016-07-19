@@ -19,6 +19,7 @@ except IOError:
   env = os.environ
 
 app = Flask(__name__)
+app.config['JSON_ADD_STATUS'] = False
 json = FlaskJSON(app)
 
 '''Imports all views'''
