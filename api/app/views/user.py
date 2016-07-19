@@ -10,4 +10,5 @@ from flask import abort
 def get_user():
     ''' Creates a new user '''
     data = request.get_json()
+    
     return {"message": "Hello World"}, 200
